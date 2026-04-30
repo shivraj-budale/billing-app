@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Billing App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- STORE HEADER -->
+        <div class="header">
+            <h2>Royal feel mens Wear</h2>
+            <p>70 foot road Solapur</p>
+            <p>Phone: 8767970170</p>
+            <hr>
+        </div>
+
+        <!-- INPUT SECTION -->
+        <div class="inputs">
+            <input type="text" id="item" placeholder="Item Name">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="qty" placeholder="Qty">
+            <button onclick="addItem()">Add</button>
+        </div>
+
+        <!-- BILL TABLE -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>₹</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="bill"></tbody>
+        </table>
+
+        <!-- TOTAL -->
+        <h3>Total: ₹ <span id="grandTotal">0</span></h3>
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+            <button onclick="clearBill()">Clear</button>
+            <button onclick="printBill()">Print</button>
+        </div>
+
+    </div>
+
+    <!-- PRINT RECEIPT -->
+    <div id="receipt">
+
+        <div class="header">
+            <img src="logo.png" alt="Logo" style="width: 250px; height: 250px;">
+            <p>70 foot road Solapur</p>
+            <p>Phone: 8767970170</p>
+
+            <hr>
+        </div>
+
+        <div id="receiptItems"></div>
+
+        <h3>Total: ₹ <span id="receiptTotal"></span></h3>
+
+        <p>Scan & Pay</p>
+        <div id="qrcode"></div>
+
+        <p>Thank You! Visit Again</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
