@@ -51,8 +51,8 @@ function generateReceipt() {
 }
 
 function generateQR() {
-    let upiID = "budaleshivrajnagesh@yapl"; // CHANGE THIS
-    let name = "royal feel "; // CHANGE THIS
+    let upiID = "8767970170@ybl"; // CHANGE THIS
+    let name = "PRATIK ANIL MAGADE"; // CHANGE THIS
 
     let upiURL = `upi://pay?pa=${upiID}&pn=${name}&am=${total.toFixed(2)}&cu=INR`;
 
